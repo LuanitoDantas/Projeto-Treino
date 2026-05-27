@@ -74,7 +74,12 @@ document.addEventListener('DOMContentLoaded', () => {
     if (dadosSalvos) {
         // Converte a string JSON de volta para um objeto Javascript
         const dados = JSON.parse(dadosSalvos);
-
+        
+    // 2. O uso do operador || (OU):
+    //    Funciona como uma proteção (Valor Padrão / Fallback).
+    //    Diz ao navegador: "Se o dado da esquerda existir, use-o. 
+    //    OU, se ele estiver vazio/undefined, coloque um texto vazio ('')".
+    //    Isso evita que apareça a palavra "undefined" escrita dentro dos inputs.
 
         // Preenche os campos do HTML com os dados guardados
         document.getElementById('cep').value = dados.cep || '';
